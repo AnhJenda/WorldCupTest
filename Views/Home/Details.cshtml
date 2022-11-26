@@ -3,4 +3,23 @@
 }
 <h1>@ViewData["Title"]</h1>
 
-
+<div class="container-fluid">
+    <div class="row text-center">
+        <div class="col-md-5">
+            <div class="team-1">
+                <img style="width: 40px; padding-bottom: 10px; margin-left: -10px;" src="@ViewData["flag1"]" />
+                <span style="font-size: 28px; font-weight: 600;">@ViewData["team1"]</span>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <h3>@ViewData["score1"] : @ViewData["score2"]</h3>
+        </div>
+        <div class="col-md-5">
+            <div class="team-2">
+                <img style="width: 40px; padding-bottom: 10px; margin-left: -10px;" src="@ViewData["flag2"]" />
+                <span style="font-size: 28px; font-weight: 600;">@ViewData["team2"]</span>
+            </div>
+        </div>
+    </div>
+    <p>Back to <a href="/Home"> Home</a></p>
+</div>

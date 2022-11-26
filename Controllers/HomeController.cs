@@ -18,26 +18,51 @@ namespace WorldCup.Controllers
             return View();
         }
 
-        public string Details(int id)
+        public IActionResult Details(int id, string team1, string team2, int score1, int score2,
+            string flag1, string flag2)
         {
             if (id == 1)
             {
-                return "Viet Nam   10 : 0   England";
+                ViewData["team1"] = "Viet Nam";
+                ViewData["flag1"] = "../../img/vietnam.png";
+                ViewData["flag2"] = "../../img/england.png";
+                ViewData["team2"] = "England";
+                ViewData["score1"] = 10;
+                ViewData["score2"] = 0;
+                return View();
             }
             else if (id == 2)
             {
-                return "Argentina   0 : 0   Poturgal";
+                ViewData["team1"] = "Poturgal";
+                ViewData["team2"] = "Argentina";
+                ViewData["flag1"] = "../../img/poturgal.png";
+                ViewData["flag2"] = "../../img/argentina.png";
+                ViewData["score1"] = 0;
+                ViewData["score2"] = 0;
+                return View();
             }
             else if (id == 3)
             {
-                return "France   1 : 1   Italy";
+                ViewData["team1"] = "France";
+                ViewData["team2"] = "Italy";
+                ViewData["flag1"] = "../../img/france.png";
+                ViewData["flag2"] = "../../img/italia.png";
+                ViewData["score1"] = 2;
+                ViewData["score2"] = 2;
+                return View();
             }
             else if (id == 4)
             {
-                return "Viet Name   10 : 0   Argentina";
+                ViewData["team1"] = "Viet Nam";
+                ViewData["team2"] = "Argentina";
+                ViewData["flag1"] = "../../img/vietnam.png";
+                ViewData["flag2"] = "../../img/argentina.png";
+                ViewData["score1"] = 10;
+                ViewData["score2"] = 0;
+                return View();
             }
             else
-                return "No match found!";
+                return Redirect("Index");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
