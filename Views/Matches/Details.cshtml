@@ -1,0 +1,95 @@
+﻿@model WorldCup.Models.Match
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div class="text-center">
+    <h4>Match</h4>
+    <hr />
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-4">
+                <img style="width: 40px; padding-bottom: 10px; margin-left: -10px;" src="@Model.flag1" />
+                <span style="font-size: 28px; font-weight: 600;">@Model.Team1</span>
+            </div>
+            <div class="col-sm-4">
+                <h3>VS</h3>
+            </div>
+            <div class="col-sm-4">
+                <img style="width: 40px; padding-bottom: 10px; margin-left: -10px;" src="@Model.flag2" />
+                <span style="font-size: 28px; font-weight: 600;">@Model.Team2</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <h3>@Model.score1</h3>
+            </div>
+            <div class="col-sm-4">
+                <h3>Score</h3>
+            </div>
+            <div class="col-sm-4">
+                <h3>@Model.score2</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <h3>@Model.position1</h3>
+            </div>
+            <div class="col-sm-4">
+                <h3>Position (%)</h3>
+            </div>
+            <div class="col-sm-4">
+                <h3>@Model.position2</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <h3>@Model.passing1</h3>
+            </div>
+            <div class="col-sm-4">
+                <h3>Passing</h3>
+            </div>
+            <div class="col-sm-4">
+                <h3>@Model.passing2</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <h3>@Model.shootOnTarget1</h3>
+            </div>
+            <div class="col-sm-4">
+                <h3>Shoot on Target</h3>
+            </div>
+            <div class="col-sm-4">
+                <h3>@Model.shootOnTarget2</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <h3>@Model.yellowCard1</h3>
+            </div>
+            <div class="col-sm-4">
+                <h3>Yellow Card</h3>
+            </div>
+            <div class="col-sm-4">
+                <h3>@Model.yellowCard2</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <h3>@Model.redCard1</h3>
+            </div>
+            <div class="col-sm-4">
+                <h3>Red Card</h3>
+            </div>
+            <div class="col-sm-4">
+                <h3>@Model.redCard2</h3>
+            </div>
+        </div>
+    </div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

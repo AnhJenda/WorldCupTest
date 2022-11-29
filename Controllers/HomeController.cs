@@ -33,7 +33,7 @@ namespace WorldCup.Controllers
             }
             else if (id == 2)
             {
-                ViewData["team1"] = "Poturgal";
+                ViewData["team1"] = "Portugal";
                 ViewData["team2"] = "Argentina";
                 ViewData["flag1"] = "../../img/poturgal.png";
                 ViewData["flag2"] = "../../img/argentina.png";

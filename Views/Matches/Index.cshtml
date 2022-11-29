@@ -1,0 +1,46 @@
+﻿@model IEnumerable<WorldCup.Models.Match>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+<div class="container-fluid">
+    <div class="row">
+        <h1 class="text-center">All Match Today</h1>
+    </div>
+    
+        <div class="row">
+            @foreach ( var item in Model){
+            <div class="col-lg-6" style="border: 1px solid pink; background-color: rgba(0, 0, 0, 0.3)">
+                <div class="container-fluid">
+                    <a asp-action="Details" asp-route-id="@item.Id" style="text-decoration: none; color: black;">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <div class="team-1">
+                                    <img style="width: 40px; padding-bottom: 10px; margin-left: -10px;" src="@item.flag1" />
+                                    <span style="font-size: 28px; font-weight: 600;">@item.Team1</span>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <h3>VS</h3>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="team-2">
+                                    <img style="width: 40px; padding-bottom: 10px; margin-left: -10px;" src="@item.flag2" />
+                                    <span style="font-size: 28px; font-weight: 600;">@item.Team2</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        }
+        </div>
+    
+</div>
